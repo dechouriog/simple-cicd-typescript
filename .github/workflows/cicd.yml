@@ -1,4 +1,4 @@
-name: CI
+name: CICD
 
 on:
   push:
@@ -71,4 +71,4 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Show GitHub Pages URL
-        run: echo "✅ Deployed-to ${{ steps.deployment.outputs.page_url }}"
+        run: echo "Deployed-to ${{ steps.deployment.outputs.page_url }}"
