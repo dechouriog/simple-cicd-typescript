@@ -1,5 +1,14 @@
 "use strict";
 
+declare global {
+  interface Window {
+    sum: (a: number, b: number) => number;
+    subtract: (a: number, b: number) => number;
+    multiply: (a: number, b: number) => number;
+    divide: (a: number, b: number) => number;
+  }
+}
+
 /**
  * Returns the sum of two numbers.
  */
@@ -32,7 +41,8 @@ function divide(a: number, b: number): number {
 }
 
 /* expose functions to window */
-(window as any).sum = sum;
-(window as any).subtract = subtract;
-(window as any).multiply = multiply;
-(window as any).divide = divide;
+window.sum = sum;
+window.subtract = subtract;
+window.multiply = multiply;
+window.divide = divide;
+
